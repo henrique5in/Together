@@ -4,7 +4,7 @@ import { ListUserSentComplimentsService } from "../services/ListUserSentComplime
 class ListUserSentComplimentsController {
     async handle(request: Request, response: Response) {
         const { user_id } = request;
-        console.log(user_id)
+        
         const listUserSentComplimentsService = new ListUserSentComplimentsService();
         const compliments = await listUserSentComplimentsService.execute(user_id);
 
